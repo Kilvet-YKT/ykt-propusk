@@ -1,0 +1,446 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e9eef3 100%);
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    padding: 32px;
+}
+
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* Карточки */
+.card {
+    background: white;
+    border-radius: 20px;
+    padding: 24px 28px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    border: 1px solid #eef2f6;
+}
+
+/* Заголовки */
+h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+h2 i {
+    color: #667eea;
+    font-size: 1.3rem;
+}
+
+h3 {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #6b7280;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Формы */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 18px;
+    margin-bottom: 20px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #6b7280;
+}
+
+input, select {
+    padding: 10px 14px;
+    background: white;
+    border: 1.5px solid #e5e7eb;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-family: 'Inter', sans-serif;
+    color: #1f2937;
+    transition: border-color 0.2s;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+/* Кнопки */
+button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Inter', sans-serif;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1.5px solid #667eea;
+    color: #667eea;
+}
+
+.btn-outline:hover {
+    background: #f5f3ff;
+    opacity: 1;
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.btn-sm {
+    padding: 5px 10px;
+    font-size: 0.7rem;
+    gap: 5px;
+}
+
+/* Таблицы */
+.table-wrapper {
+    overflow-x: auto;
+    border-radius: 12px;
+    border: 1px solid #eef2f6;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px 10px;
+    text-align: left;
+    border-bottom: 1px solid #eef2f6;
+}
+
+th {
+    background: #f9fafb;
+    color: #6b7280;
+    font-weight: 600;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+td {
+    color: #374151;
+    font-size: 0.85rem;
+}
+
+/* Бейджи */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.status-work {
+    background: #fef3c7;
+    color: #d97706;
+}
+
+.status-out {
+    background: #dbeafe;
+    color: #2563eb;
+}
+
+.status-return {
+    background: #d1fae5;
+    color: #059669;
+}
+
+/* Секции */
+.section-bg {
+    background: #f9fafb;
+    border-radius: 16px;
+    padding: 18px;
+    margin: 18px 0;
+    border: 1px solid #eef2f6;
+}
+
+/* Статистика - кликабельные плитки без анимаций */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 18px;
+    margin-bottom: 24px;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 16px;
+    padding: 18px;
+    border: 1px solid #eef2f6;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.stat-card:hover {
+    border-color: #667eea;
+    background: #fefefe;
+}
+
+.stat-card.active {
+    border: 2px solid #667eea;
+    background: #faf9ff;
+}
+
+.stat-card.active .stat-number {
+    color: #667eea;
+}
+
+.stat-card h4 {
+    font-size: 0.7rem;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.stat-card .stat-number {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.stat-card .stat-label {
+    font-size: 0.7rem;
+    color: #9ca3af;
+    margin-top: 6px;
+}
+
+/* Модальное окно */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 20px;
+    padding: 28px;
+    max-width: 750px;
+    width: 90%;
+    max-height: 85vh;
+    overflow-y: auto;
+}
+
+/* Логотип */
+.logo-container {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.logo-img {
+    height: 65px;
+    width: auto;
+    margin-bottom: 12px;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.header-logo .logo-img {
+    height: 40px;
+    margin-bottom: 0;
+}
+
+/* Flex */
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+/* Алёрт */
+.alert {
+    padding: 10px 14px;
+    border-radius: 10px;
+    background: #fef3c7;
+    border-left: 3px solid #f59e0b;
+    color: #92400e;
+    font-size: 0.8rem;
+    margin-top: 14px;
+}
+
+/* Фильтры */
+.filter-group {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.filter-chip {
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    cursor: pointer;
+    background: #f3f4f6;
+    color: #6b7280;
+    border: 1px solid #e5e7eb;
+}
+
+.filter-chip:hover {
+    background: #e5e7eb;
+}
+
+.filter-chip.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-color: transparent;
+}
+
+/* Модальное окно статистики */
+.stats-modal {
+    max-width: 1000px;
+    width: 95%;
+}
+
+.stats-summary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f9fafb;
+    border-radius: 12px;
+}
+
+.summary-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.summary-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: #6b7280;
+    letter-spacing: 0.5px;
+}
+
+.summary-value {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.stat-badge {
+    display: inline-block;
+    background: #f3f4f6;
+    color: #667eea;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.item-list {
+    font-size: 0.75rem;
+    padding: 2px 0;
+    border-bottom: 1px dashed #eef2f6;
+}
+
+.item-list:last-child {
+    border-bottom: none;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 40px;
+    color: #9ca3af;
+}
+
+.empty-state i {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    opacity: 0.5;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eef2f6;
+}
+
+.stats-table td {
+    vertical-align: top;
+}
